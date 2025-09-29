@@ -13,8 +13,6 @@ export default function Video() {
                 width="2" 
                 height="2" 
                 position="0 0.3 0"
-                autoplay
-                
                 muted>
             </a-video>
         </a-marker>
