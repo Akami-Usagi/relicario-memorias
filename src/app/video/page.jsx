@@ -10,11 +10,11 @@ export default function Video() {
         <a-marker preset="hiro">
             <a-video 
                 src="/videos/video.mp4" 
-                width="1" 
-                height="0.6" 
+                width="2" 
+                height="2" 
                 position="0 0.3 0"
                 autoplay
-                loop
+                
                 muted>
             </a-video>
         </a-marker>
