@@ -12,8 +12,8 @@ export default function Intro() {
         {/* Modelo 3D */}
         <a-entity
           gltf-model="/models/hornet/source/HORNET.glb"
-          scale="5 5 5"
-          position="0 0 0"
+          scale="2 2 2"
+          position="0 0 1"
           rotation="-90 0 0"
         ></a-entity>
       </a-marker>
