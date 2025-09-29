@@ -20,19 +20,14 @@ export default function ARPage() {
   }, []);
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
-      <a-scene
-        embedded
-        arjs="trackingMethod: best; sourceType: webcam;"
-        vr-mode-ui="enabled: false"
-        renderer="logarithmicDepthBuffer: true;"
-      >
+    
+      <a-scene arjs >
         <a-marker preset="hiro">
           <a-box color="red" position="0 0.5 0"></a-box>
         </a-marker>
 
         <a-entity camera></a-entity>
       </a-scene>
-    </div>
+    
   );
 }
