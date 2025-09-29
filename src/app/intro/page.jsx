@@ -8,7 +8,12 @@ export default function ARPage() {
     
       <a-scene arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: true;" >
         <a-marker preset="hiro">
-          <a-box color="red" position="0 0.5 0"></a-box>
+          <a-entity 
+                gltf-model="/models/hornet/source/HORNET.glb" 
+                scale="0.5 0.5 0.5" 
+                position="0 0 0" 
+                rotation="0 0 0">
+            </a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>
