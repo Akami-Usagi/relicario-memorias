@@ -2,36 +2,36 @@
 import { useEffect, useState } from "react";
 
 export default function Intro() {
+  const [coords, setCoords] = useState(null); // objeto {lat, lon}
 
-const [lat, setLat] = useState("");
-const [lon, setLon] = useState("");
-
-useEffect(() =>{
-
+  useEffect(() => {
     navigator.geolocation.getCurrentPosition((pos) => {
-      setLat(pos.coords.latitude);
-      setLon(pos.coords.longitude);
+      setCoords({
+        lat: pos.coords.latitude,
+        lon: pos.coords.longitude
+      });
     });
-
-},[])
+  }, []);
 
   return (
     <a-scene 
       vr-mode-ui="enabled: false"
       embedded
-      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: true;"
+      arjs="sourceType: webcam; debugUIEnabled: true;"
     >
-
-      {/* 📍 Modelo en coordenadas GPS */}
-      <a-entity
-        gltf-model="/models/hornet/source/HORNET.glb"
-        gps-entity-place={`latitude: ${lat}; longitude: ${lon}`}
-        scale="50 50 50"
-        rotation="0 0 0"
-      ></a-entity>
-
       {/* 🎥 Cámara con soporte GPS */}
       <a-camera gps-camera rotation-reader></a-camera>
+
+      {/* 📍 Renderizar modelo solo cuando hay coordenadas */}
+      {coords && (
+        <a-entity
+          gltf-model="/models/hornet/source/HORNET.glb"
+          gps-entity-place={`latitude: ${coords.lat}; longitude: ${coords.lon}`}
+          scale="5 5 5"
+          rotation="0 0 0"
+          position="0 1.5 0"  // altura sobre el suelo
+        ></a-entity>
+      )}
     </a-scene>
-  )
+  );
 }
