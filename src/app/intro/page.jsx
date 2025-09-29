@@ -12,7 +12,7 @@ export default function Intro() {
       <a-entity
         gltf-model="/models/hornet/source/HORNET.glb"
         gps-entity-place="latitude: 3.89976041136871; longitude:  -76.30010948442047;"  
-        scale="5 5 5"
+        scale="50 50 50"
         rotation="0 0 0"
       ></a-entity>
 
