@@ -1,7 +1,7 @@
 "use client"
 
 
-export default function ARPage() {
+export default function Intro() {
   
 
   return (
