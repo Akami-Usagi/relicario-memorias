@@ -52,7 +52,7 @@ export default function Intro() {
       {/* Fantasma oculto hasta que calculemos coordenadas */}
       <a-entity
         id="ghost"
-        gltf-model="/models/ghost.glb"
+        gltf-model="/models/hornet/source/HORNET.glb"
         scale="5 5 5"
         visible="false"
       ></a-entity>
