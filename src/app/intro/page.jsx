@@ -10,7 +10,7 @@ export default function ARPage() {
         <a-marker preset="hiro">
           <a-entity 
                 gltf-model="/models/hornet/source/HORNET.glb" 
-                scale="2.5" 
+                scale="1 1 1" 
                 position="0 0 0" 
                 rotation="0 0 0">
             </a-entity>
