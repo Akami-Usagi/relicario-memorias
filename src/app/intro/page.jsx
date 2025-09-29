@@ -10,7 +10,7 @@ export default function Intro() {
         <a-marker preset="hiro">
           <a-entity 
                 gltf-model="/models/hornet/source/HORNET.glb" 
-                scale="1 1 1" 
+                scale="5 5 5" 
                 position="0 0 0" 
                 rotation="0 0 0">
             </a-entity>
