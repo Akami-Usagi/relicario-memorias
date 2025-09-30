@@ -1,25 +1,29 @@
 "use client";
+import { useEffect, useState } from 'react';
 
 export default function Intro() {
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Marca que ya estamos en el cliente
+  }, []);
+
+  if (!isClient) return null; // No renderizar en SSR
+
   return (
     <a-scene 
-      vr-mode-ui="enabled: false"
-      embedded
-      arjs="trackingMethod: best; sourceType: webcam"
-    >
-      {/* 📍 Marcador Hiro */}
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" 
+        vr-mode-ui="enabled: false">
       <a-marker preset="hiro">
-        {/* Modelo 3D */}
-        <a-entity
+        <a-entity 
+          position="0 0 0" 
+          scale="1" 
           gltf-model="/models/cat.glb"
-          scale="1 1 1"
-          position="0 0 1"
           rotation="-90 0 0"
-        ></a-entity>
+          ></a-entity>
       </a-marker>
-
-      {/* 🎥 Cámara */}
-      <a-entity camera></a-entity>
+      <a-entity camera position="0 0 0"></a-entity>
     </a-scene>
   );
 }
