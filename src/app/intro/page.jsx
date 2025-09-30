@@ -15,7 +15,6 @@ export default function Intro() {
 
   return (
     <a-scene 
-        embedded
         vr-mode-ui="enabled: false"
         renderer="antialias: true; alpha: true"
         style={{ width: '100%', height: '100%' }}>
