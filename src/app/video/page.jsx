@@ -1,32 +1,70 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function Video() {
-
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); // Marca que ya estamos en el cliente
+    setIsClient(true);
   }, []);
 
-  if (!isClient) return null; // No renderizar en SSR
+  useEffect(() => {
+    if (!isClient) return;
+
+    const marker = document.querySelector("a-marker");
+    const videoEl = document.querySelector("#myVideo");
+
+    if (marker && videoEl) {
+      const handleFound = () => {
+        console.log("Marcador detectado → reproducir video");
+        videoEl.play().catch((e) => console.warn("No se pudo reproducir:", e));
+      };
+
+      const handleLost = () => {
+        console.log("Marcador perdido → pausar video");
+        videoEl.pause();
+      };
+
+      marker.addEventListener("markerFound", handleFound);
+      marker.addEventListener("markerLost", handleLost);
+
+      return () => {
+        marker.removeEventListener("markerFound", handleFound);
+        marker.removeEventListener("markerLost", handleLost);
+      };
+    }
+  }, [isClient]);
+
+  if (!isClient) return null;
 
   return (
-    <a-scene 
-        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" 
-        vr-mode-ui="enabled: false">
-      <a-marker preset="hiro">
-        <a-video 
-                src="/videos/video.mp4" 
-                width="2" 
-                height="2" 
-                position="0 0.3 0"
-                rotation="-90 0 0"
-                autoplay="false"
-                muted>
-            </a-video>
-      </a-marker>
-      <a-entity camera position="0 0 0"></a-entity>
-    </a-scene>
+    <>
+      {/* Video HTML oculto */}
+      <video
+        id="myVideo"
+        src="/videos/video.mp4"
+        preload="auto"
+        playsInline
+        style={{ display: "none" }}
+      ></video>
+
+      <a-scene
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+        vr-mode-ui="enabled: false"
+        embedded
+      >
+        <a-marker preset="hiro">
+          {/* Usar el video por id como textura */}
+          <a-video
+            src="#myVideo"
+            width="2"
+            height="2"
+            position="0 0.3 0"
+            rotation="-90 0 0"
+          ></a-video>
+        </a-marker>
+        <a-entity camera position="0 0 0"></a-entity>
+      </a-scene>
+    </>
   );
 }
