@@ -50,7 +50,7 @@ export default function Video() {
 
       <a-scene
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-        vr-mode-ui="enabled: false"
+        xr-mode-ui="enabled: false"
         embedded
       >
         <a-marker presset="hiro">
