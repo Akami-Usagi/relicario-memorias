@@ -15,9 +15,10 @@ export default function Intro() {
 
   return (
     <a-scene 
-        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" 
-        xr-mode-ui="enabled: false"
-        embedded>
+        embedded
+        vr-mode-ui="enabled: false"
+        renderer="antialias: true; alpha: true"
+        style={{ width: '100%', height: '100%' }}>
       <a-marker presset="hiro">
         <a-entity 
           position="0 0 0" 
