@@ -51,9 +51,7 @@ export default function Video() {
       <a-scene
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
         xr-mode-ui="enabled: false"
-        renderer="antialias: true; alpha: true"
-        style={{ width: '100%', height: '100%' }}
-        fog
+        isMobile    
       >
         <a-marker presset="hiro">
           {/* Usar el video por id como textura */}
