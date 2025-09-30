@@ -5,7 +5,7 @@ export default function Intro() {
     <a-scene 
       vr-mode-ui="enabled: false"
       embedded
-      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: true;"
+      arjs="trackingMethod: best; sourceType: webcam"
     >
       {/* 📍 Marcador Hiro */}
       <a-marker preset="hiro">
