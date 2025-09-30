@@ -53,11 +53,11 @@ export default function Video() {
         vr-mode-ui="enabled: false"
         embedded
       >
-        <a-marker preset="hiro">
+        <a-marker type="pattern" url="/markers/penta.patt">
           {/* Usar el video por id como textura */}
           <a-video
             src="#myVideo"
-            width="2"
+            width="2.5"
             height="2"
             position="0 0.3 0"
             rotation="-90 0 0"
