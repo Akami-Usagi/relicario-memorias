@@ -63,7 +63,8 @@ export default function Video() {
             rotation="-90 0 0"
           ></a-video>
         </a-marker>
-        <a-entity camera position="0 0 0"></a-entity>
+        <a-entity camera="fov: 60; near: 0.1; far: 1000" 
+            look-controls="enabled: false"></a-entity>
       </a-scene>
     </>
   );
