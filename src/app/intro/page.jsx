@@ -16,7 +16,8 @@ export default function Intro() {
   return (
     <a-scene 
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" 
-        vr-mode-ui="enabled: false">
+        vr-mode-ui="enabled: false"
+        embedded>
       <a-marker type="pattern" url="/markers/penta.patt">
         <a-entity 
           position="0 0 0" 
