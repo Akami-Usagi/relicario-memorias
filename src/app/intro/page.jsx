@@ -18,7 +18,7 @@ export default function Intro() {
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" 
         vr-mode-ui="enabled: false"
         embedded>
-      <a-marker type="pattern" url="/markers/penta.patt">
+      <a-marker presset="hiro">
         <a-entity 
           position="0 0 0" 
           scale="5 5 5" 
