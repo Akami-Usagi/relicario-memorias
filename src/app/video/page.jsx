@@ -6,22 +6,10 @@ export default function Video() {
 
   useEffect(() => {
     setIsClient(true);
-    return () => {
-    const scene = document.querySelector("a-scene");
-    if (scene) {
-      // Parar sistemas de AR.js
-      if (scene.systems["arjs"]) {
-        scene.systems["arjs"].stop();
-      }
-
-      // Desmontar la escena completamente
-      scene.parentNode.removeChild(scene);
-    }
-  };
   }, []);
 
   useEffect(() => {
-    if (!isClient) return;
+    setIsClient(true);
 
     const marker = document.querySelector("a-marker");
     const videoEl = document.querySelector("#myVideo");
@@ -45,7 +33,7 @@ export default function Video() {
         marker.removeEventListener("markerLost", handleLost);
       };
     }
-  }, [isClient]);
+  }, []);
 
   if (!isClient) return null;
 

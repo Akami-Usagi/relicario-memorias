@@ -7,20 +7,7 @@ export default function Intro() {
   
 
   useEffect(() => {
-    setIsClient(true); // Marca que ya estamos en el cliente
-    return () => {
-    const scene = document.querySelector("a-scene");
-    if (scene) {
-      // Parar sistemas de AR.js
-      if (scene.systems["arjs"]) {
-        scene.systems["arjs"].stop();
-      }
-
-      // Desmontar la escena completamente
-      scene.parentNode.removeChild(scene);
-    }
-  };
-    
+    setIsClient(true); // Marca que ya estamos en el cliente    
   }, []);
 
   if (!isClient) return null; // No renderizar en SSR
