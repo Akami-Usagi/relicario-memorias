@@ -53,7 +53,7 @@ export default function Video() {
         xr-mode-ui="enabled: false"
         isMobile    
       >
-        <a-marker presset="hiro">
+        <a-marker type="pattern" url="/markers/penta.patt">
           {/* Usar el video por id como textura */}
           <a-video
             src="#myVideo"

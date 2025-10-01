@@ -19,7 +19,7 @@ export default function Intro() {
         xr-mode-ui="enabled: false"
         isMobile
         >
-      <a-marker presset="hiro">
+      <a-marker type="pattern" url="/markers/penta.patt">
         <a-entity 
           position="0 0 0" 
           scale="5 5 5" 
