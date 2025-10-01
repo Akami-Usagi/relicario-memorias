@@ -7,8 +7,14 @@ export default function Video() {
   useEffect(() => {
     setIsClient(true);
     return () => {
-    const scene = document.querySelector('a-scene');
+    const scene = document.querySelector("a-scene");
     if (scene) {
+      // Parar sistemas de AR.js
+      if (scene.systems["arjs"]) {
+        scene.systems["arjs"].stop();
+      }
+
+      // Desmontar la escena completamente
       scene.parentNode.removeChild(scene);
     }
   };
