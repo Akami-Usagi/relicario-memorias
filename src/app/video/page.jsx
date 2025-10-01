@@ -57,13 +57,13 @@ export default function Video() {
           {/* Usar el video por id como textura */}
           <a-video
             src="#myVideo"
-            width="2.5"
-            height="2"
-            position="0 0.3 0"
+            width="5"
+            height="4"
+            position="0 0 0"
             rotation="-90 0 0"
           ></a-video>
         </a-marker>
-        <a-entity camera="fov: 60; near: 0.1; far: 1000" 
+        <a-entity camera="fov: 60; near: 0.1; far: 10000" 
             look-controls="enabled: false"></a-entity>
       </a-scene>
     </>

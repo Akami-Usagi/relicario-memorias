@@ -27,7 +27,7 @@ export default function Intro() {
           rotation="-90 0 0"
           ></a-entity>
       </a-marker>
-      <a-entity camera="fov: 60; near: 0.1; far: 1000" 
+      <a-entity camera="fov: 60; near: 0.1; far: 10000" 
             look-controls="enabled: false"></a-entity>
     </a-scene>
   );
