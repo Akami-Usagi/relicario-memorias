@@ -15,7 +15,7 @@ export default function Intro() {
 
   return (
     <a-scene 
-        arjs
+        arjs="trackingMethod: best;"
         xr-mode-ui="enabled: false"
         isMobile
         >
