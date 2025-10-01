@@ -42,7 +42,7 @@ export default function Video() {
       {/* Video HTML oculto */}
       <video
         id="myVideo"
-        src="/videos/video.mp4"
+        src="/videos/transparent-video.webm"
         preload="auto"
         playsInline
         style={{ display: "none" }}
@@ -57,8 +57,8 @@ export default function Video() {
           {/* Usar el video por id como textura */}
           <a-video
             src="#myVideo"
-            width="5"
-            height="4"
+            width="1.6"
+            height="1"
             position="0 0 0"
             rotation="-90 0 0"
           ></a-video>
