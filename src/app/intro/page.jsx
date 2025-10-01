@@ -10,8 +10,8 @@ export default function Intro() {
     // Registrar componente de suavizado
     AFRAME.registerComponent("smooth", {
       schema: {
-        positionFactor: { type: "number", default: 0.2 },
-        rotationFactor: { type: "number", default: 0.2 },
+        positionFactor: { type: "number", default: 0.01 },
+        rotationFactor: { type: "number", default: 0.01 },
       },
       init: function () {
         this.lastPosition = new THREE.Vector3();
