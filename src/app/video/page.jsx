@@ -9,7 +9,7 @@ export default function Video() {
   }, []);
 
   useEffect(() => {
-    setIsClient(true);
+    if (!isClient) return;
 
     const marker = document.querySelector("a-marker");
     const videoEl = document.querySelector("#myVideo");
@@ -33,7 +33,7 @@ export default function Video() {
         marker.removeEventListener("markerLost", handleLost);
       };
     }
-  }, []);
+  }, [isClient]);
 
   if (!isClient) return null;
 
