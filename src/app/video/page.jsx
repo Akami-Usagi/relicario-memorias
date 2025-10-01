@@ -49,7 +49,7 @@ export default function Video() {
       ></video>
 
       <a-scene
-        arjs="trackingMethod: best;"
+        arjs
         xr-mode-ui="enabled: false"
         isMobile    
       >
