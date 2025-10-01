@@ -12,8 +12,8 @@ export default function Intro() {
     const soundEl = document.querySelector("#mysound");
 
     if (marker && soundEl) {
-      const handleFound = () => soundEl.components.sound.playSound();
-      const handleLost = () => soundEl.components.sound.stopSound();
+      const handleFound = () => soundEl.play();
+      const handleLost = () => soundEl.pause();
 
       marker.addEventListener("markerFound", handleFound);
       marker.addEventListener("markerLost", handleLost);
