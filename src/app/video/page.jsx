@@ -57,7 +57,7 @@ export default function Video() {
       <a-scene
         arjs
         xr-mode-ui="enabled: false"
-        isMobile    
+         
       >
         <a-marker type="pattern" url="/markers/penta.patt">
           {/* Usar el video por id como textura */}

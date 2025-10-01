@@ -23,7 +23,7 @@ export default function Intro() {
     <a-scene 
         arjs
         xr-mode-ui="enabled: false"
-        isMobile
+        
         >
       <a-marker type="pattern" url="/markers/penta.patt">
         <a-entity 
