@@ -18,7 +18,7 @@ export default function Intro() {
         xr-mode-ui="enabled: false"
         
         >
-      <a-marker type="pattern" url="/markers/penta.patt">
+      <a-marker type="pattern" url="/markers/star.patt">
         <a-entity 
           position="0 0 0" 
           scale="5 5 5" 
