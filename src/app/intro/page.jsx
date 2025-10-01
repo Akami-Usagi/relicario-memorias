@@ -8,6 +8,12 @@ export default function Intro() {
 
   useEffect(() => {
     setIsClient(true); // Marca que ya estamos en el cliente
+    return () => {
+    const scene = document.querySelector('a-scene');
+    if (scene) {
+      scene.parentNode.removeChild(scene);
+    }
+  };
     
   }, []);
 

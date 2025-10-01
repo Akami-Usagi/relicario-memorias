@@ -6,6 +6,12 @@ export default function Video() {
 
   useEffect(() => {
     setIsClient(true);
+    return () => {
+    const scene = document.querySelector('a-scene');
+    if (scene) {
+      scene.parentNode.removeChild(scene);
+    }
+  };
   }, []);
 
   useEffect(() => {
