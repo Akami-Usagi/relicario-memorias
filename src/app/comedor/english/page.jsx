@@ -1,8 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
+import MarkerScanner from "@/components/markerScanner";
+
+
 
 export default function ComedorEnglish() {
   const [isClient, setIsClient] = useState(false);
+  const [scanner, setScanner] = useState(true);
 
   useEffect(() => {
     setIsClient(true);
@@ -16,13 +20,13 @@ export default function ComedorEnglish() {
 
     if (marker && videoEl) {
       const handleFound = () => {
-        console.log("Marcador detectado → reproducir video");
         videoEl.play().catch((e) => console.warn("No se pudo reproducir:", e));
+        setScanner(false)
       };
 
       const handleLost = () => {
-        console.log("Marcador perdido → pausar video");
         videoEl.pause();
+        setScanner(true)
       };
 
       marker.addEventListener("markerFound", handleFound);
@@ -39,7 +43,7 @@ export default function ComedorEnglish() {
 
   return (
     <>
-      {/* Video HTML oculto */}
+      
       <video
         id="myVideo"
         src="/videos/comedor/comedor_english.webm"
@@ -51,10 +55,10 @@ export default function ComedorEnglish() {
       <a-scene
         arjs="sourceType: webcam; trackingMethod: best; detectionMode: mono"
         xr-mode-ui="enabled: false"
-         
-      >
+        >
+          
         <a-marker type="pattern" url="/markers/t.patt">
-          {/* Usar el video por id como textura */}
+          
           <a-video
             src="#myVideo"
             width="6"
@@ -66,6 +70,14 @@ export default function ComedorEnglish() {
         <a-entity camera="fov: 60; near: 0.1; far: 10000" 
             look-controls="enabled: false"></a-entity>
       </a-scene>
+
+        {scanner ? (
+            
+               <MarkerScanner/>
+            
+        ) : null}
+      
+
     </>
   );
 }
