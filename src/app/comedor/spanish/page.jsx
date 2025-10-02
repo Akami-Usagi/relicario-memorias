@@ -61,8 +61,8 @@ export default function ComedorSpanish() {
           
           <a-video
             src="#myVideo"
-            width="6"
-            height="6"
+            width="7"
+            height="5"
             position="0 0 0"
             rotation="-90 0 0"
           ></a-video>
@@ -73,7 +73,7 @@ export default function ComedorSpanish() {
 
         {scanner ? (
             
-               <MarkerScanner/>
+               <MarkerScanner text={"Escanea para ver el recuerdo"}/>
             
         ) : null}
       

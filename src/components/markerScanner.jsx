@@ -27,18 +27,22 @@ const ScannerDiv = styled.div`
 const ScannerImage = styled.img`
     width: 300px;
     place-self: center;
+    @media (max-width: 500px){
+        width: 65%;
+    }
 `
 const ScannerText = styled.h1`
     color: rgba(255,255,255,0.5);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 90%;
 `
 
-export default function MarkerScanner(){
+export default function MarkerScanner({text}){
     return(
         <CustomDiv>
             <ScannerDiv>
-                <ScannerText>Escanea el marcador para ver el recuerdo</ScannerText>
+                <ScannerText>{text}</ScannerText>
                 <ScannerImage src="/images/marker_scanner.webp" alt="scanner"/>
             </ScannerDiv>
         </CustomDiv>
