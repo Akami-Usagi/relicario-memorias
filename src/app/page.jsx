@@ -1,5 +1,5 @@
 "use client"
-import { MainDiv, LogoImage, AreaTitle, AreaText, DefaultButton } from "@/components/customComponents";
+import { MainDiv, LogoImage, AreaTitle, AreaText, DefaultButton, ButtonsDiv } from "@/components/customComponents";
 
 export default function Home() {
   return (
@@ -14,7 +14,11 @@ export default function Home() {
       Además, la experiencia se adapta a cada visitante con dos versiones, en español e inglés, para acercar este legado cultural tanto a la comunidad local como a los visitantes internacionales. De esta manera, Relicario de Memorias se convierte en una ventana interactiva al patrimonio, un espacio donde la memoria se preserva y se comparte de forma viva, sensible y cercana.
 
       </AreaText>
-      <a href="comedor/"><DefaultButton>Iniciar Demo Comedor</DefaultButton></a>
+      <ButtonsDiv>
+          <a href="instrucciones/"><DefaultButton>Instrucciones</DefaultButton></a>
+          <a href="comedor/"><DefaultButton>Iniciar Demo</DefaultButton></a>
+      </ButtonsDiv>
+      
     </MainDiv>
   );
 }
