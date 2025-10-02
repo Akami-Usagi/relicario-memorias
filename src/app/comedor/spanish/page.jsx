@@ -61,8 +61,8 @@ export default function ComedorSpanish() {
           
           <a-video
             src="#myVideo"
-            width="7"
-            height="5"
+            width="5"
+            height="10"
             position="0 0 0"
             rotation="-90 0 0"
           ></a-video>
