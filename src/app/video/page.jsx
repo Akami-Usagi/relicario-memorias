@@ -49,7 +49,7 @@ export default function Video() {
       ></video>
 
       <a-scene
-        arjs
+        arjs="sourceType: webcam; trackingMethod: best; detectionMode: mono"
         xr-mode-ui="enabled: false"
          
       >
@@ -57,8 +57,8 @@ export default function Video() {
           {/* Usar el video por id como textura */}
           <a-video
             src="#myVideo"
-            width="1.6"
-            height="1"
+            width="16"
+            height="9"
             position="0 0 0"
             rotation="-90 0 0"
           ></a-video>
