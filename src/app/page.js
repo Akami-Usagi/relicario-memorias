@@ -22,8 +22,8 @@ export default function Home() {
         </ol>
 
         <div className={styles.ctas}>
-          <a href="/intro">intro</a>
-          <a href="/video">video</a>
+          <a href="/comedor/español">español</a>
+          <a href="/comedor/ingles">english</a>
         </div>
       </main>
       <footer className={styles.footer}>
