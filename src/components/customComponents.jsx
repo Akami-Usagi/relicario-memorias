@@ -34,4 +34,7 @@ export const AreaText = styled.p`
     font-size: medium;
     margin-top: -30px;
     margin-bottom: 50px;
+    width: 400px;
+    text-align: center;
+
 `
