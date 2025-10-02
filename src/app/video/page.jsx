@@ -42,7 +42,7 @@ export default function Video() {
       {/* Video HTML oculto */}
       <video
         id="myVideo"
-        src="/videos/tiki.webm"
+        src="/videos/comedor.webm"
         preload="auto"
         playsInline
         style={{ display: "none" }}
