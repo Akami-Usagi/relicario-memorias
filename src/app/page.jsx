@@ -4,7 +4,7 @@ import { MainDiv, LogoImage, AreaText, DefaultButton, ButtonsDiv } from "@/compo
 export default function Home() {
   return (
     <MainDiv>
-      <LogoImage src="/images/main_logo.png" alt="Relicario de Memorias"/>
+      <LogoImage src="/images/main_logo.webp" alt="Relicario de Memorias"/>
       
       <AreaText>
       <strong>Relicario de Memorias</strong> es una experiencia inmersiva que permite recorrer la historia y el patrimonio de Guadalajara de Buga a través de los relatos de sus protagonistas. Cada lugar, cada espacio y cada recuerdo se convierten en una oportunidad para descubrir las historias de las personas y acontecimientos que han dejado una huella en la identidad de la ciudad.
