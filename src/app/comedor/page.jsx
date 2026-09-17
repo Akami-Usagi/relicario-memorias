@@ -7,7 +7,7 @@ export default function Comedor(){
 
     return(
         <MainDiv>
-            <LogoImage src="/images/main_logo.webp" alt="Hacienda El Paraiso"/>
+            <LogoImage src="/images/main_logo.png" alt="Relicario de Memorias"/>
             <AreaTitle>El Comedor</AreaTitle>
             <AreaText>Selecciona el idioma para revivir el recuerdo</AreaText>
             <ButtonsDiv>

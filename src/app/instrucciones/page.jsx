@@ -4,7 +4,7 @@ import { MainDiv, LogoImage, AreaTitle, AreaText, DefaultButton } from "@/compon
 export default function Instrucciones(){
     return(
         <MainDiv>
-            <LogoImage src="/images/main_logo.webp" alt="Hacienda el Paraiso"/>
+            <LogoImage src="/images/main_logo.png" alt="Relicario de Memorias"/>
             <AreaTitle>Instrucciones</AreaTitle>
             <AreaText>
                 <strong>Instrucciones de uso — Relicario de Memorias</strong><br/><br/>
